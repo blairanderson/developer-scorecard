@@ -126,8 +126,8 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers
   coffee-rails (~> 4.0.0)
-  ember-rails (~> 0.14)
-  ember-source (~> 1.1)
+  ember-rails
+  ember-source
   jquery-rails
   rails (= 4.1.0.beta1)
   sass-rails (~> 4.0.0.rc1)
