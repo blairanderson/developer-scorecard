@@ -1,0 +1,1 @@
+(function(){ReportCard.Router.map(function(){})}).call(this);

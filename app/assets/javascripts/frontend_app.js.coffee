@@ -4,7 +4,7 @@
 #= require ember
 #= require ember-data
 #= require_self
-#= require caller
+#= require report_card
 
 # for more details see: http://emberjs.com/guides/application/
-window.Caller = Ember.Application.create()
+window.ReportCard = Ember.Application.create()

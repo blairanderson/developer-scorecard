@@ -1,5 +1,5 @@
 # For more information see: http://emberjs.com/guides/routing/
 
-Caller.Router.map ()->
+ReportCard.Router.map ()->
   # @resource('posts')
 

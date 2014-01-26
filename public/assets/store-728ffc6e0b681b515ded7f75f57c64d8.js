@@ -1,0 +1,1 @@
+(function(){ReportCard.Store=DS.Store.extend({adapter:"_ams"})}).call(this);
