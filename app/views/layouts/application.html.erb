@@ -2,10 +2,17 @@
 <html>
 <head>
   <title>Open Source Report Card</title>
-  <%= stylesheet_link_tag "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag 'application', :media => 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <% if user_signed_in? %>
+    <%= current_user.inspect %>
+    <%= link_to 'logout', logout_path, method: :delete %>
+  <% else %>
+    <%= link_to 'login', user_omniauth_authorize_path(:github), class: 'login' %>
+  <% end %>
+  <%= yield %>
 </body>
 </html>

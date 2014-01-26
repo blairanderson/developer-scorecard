@@ -6,10 +6,19 @@ gem 'sass-rails', '~> 4.0.0.rc1'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
+gem 'bootstrap-sass'
+gem 'font-awesome-rails', git: 'https://github.com/blairanderson/font-awesome-rails'
+gem 'momentjs-rails', '2.4.0'
 
-gem "active_model_serializers"
-gem "ember-rails"
-gem "ember-source"
+gem 'active_model_serializers'
+gem 'ember-rails'
+gem 'ember-source'
+gem 'simple_form'
+gem 'newrelic_rpm'
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-github'
+gem 'rack-cors', :require => 'rack/cors'
 
 group :production do
  gem 'pg'
@@ -19,8 +28,20 @@ end
 group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/jonleighton/spring
   gem 'spring'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'guard-rspec'
+  gem 'capybara'
+  gem 'rspec-rails', '~> 2.0'
+  gem 'launchy'
+  gem 'dotenv-rails'
+end
+
+group :test do
+  gem 'vcr', '2.8.0'
+  gem 'webmock', '1.16'
 end

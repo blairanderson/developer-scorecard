@@ -1,7 +1,15 @@
 Rails.application.routes.draw do
-  root :to => 'assets#index'
-  get "assets/index"
+  devise_scope :user do
+    delete "logout", :to => "devise/sessions#destroy"
+  end
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
+  root :to => 'dashboards#new'
+
+  get 'dashboard' => 'dashboards#index', as: :dashboard
+  resources :dashboards, except: [:index]
+
+  get "assets/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
