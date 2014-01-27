@@ -215,11 +215,12 @@ GEM
       railties (>= 4.0.0, < 5.0)
       sass (>= 3.1.10)
       sprockets-rails (~> 2.0.0)
+    shoulda-matchers (2.5.0)
+      activesupport (>= 3.0.0)
     simple_form (3.0.1)
       actionpack (>= 4.0.0, < 4.1)
       activemodel (>= 4.0.0, < 4.1)
     slop (3.4.7)
-    spring (1.0.0)
     sprockets (2.10.1)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -270,6 +271,7 @@ DEPENDENCIES
   guard-rspec
   jquery-rails
   launchy
+  minitest
   momentjs-rails (= 2.4.0)
   newrelic_rpm
   omniauth
@@ -280,8 +282,8 @@ DEPENDENCIES
   rails_12factor
   rspec-rails (~> 2.0)
   sass-rails (~> 4.0.0.rc1)
+  shoulda-matchers
   simple_form
-  spring
   sqlite3
   uglifier (>= 1.3.0)
   vcr (= 2.8.0)

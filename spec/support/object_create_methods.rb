@@ -11,7 +11,10 @@ module ObjectCreationMethods
       info: {
         name: "bob smith",
         image: "http://placehold.it/50/50",
-        email: "example@example.com"}
+        email: "example@example.com"},
+      credentials: {
+        secret: "secret",
+        token: "token"},
     })
   end
 

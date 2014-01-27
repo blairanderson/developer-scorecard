@@ -26,8 +26,6 @@ group :production do
 end
 
 group :development do
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/jonleighton/spring
-  gem 'spring'
   gem 'better_errors'
   gem 'binding_of_caller'
 end
@@ -37,6 +35,7 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'capybara'
   gem 'rspec-rails', '~> 2.0'
+  gem 'shoulda-matchers'
   gem 'launchy'
   gem 'dotenv-rails'
 end
@@ -44,4 +43,5 @@ end
 group :test do
   gem 'vcr', '2.8.0'
   gem 'webmock', '1.16'
+  gem 'minitest', require: 'minitest/autorun'
 end
