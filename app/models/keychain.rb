@@ -3,11 +3,9 @@ class Keychain < ActiveRecord::Base
   belongs_to :user
   validates_presence_of :api_token
   validates_presence_of :api_secret
-  validates_presence_of :oauth_secret
-  validates_presence_of :oauth_token
 
   def self.build_from_oauth(auth)
-    create do |key|
+    new do |key|
       key.api_token    = build_api_token
       key.api_secret   = build_api_secret
       key.oauth_secret = auth['credentials']['secret']

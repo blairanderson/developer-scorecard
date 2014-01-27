@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 20140127043209) do
     t.integer  "user_id"
     t.string   "api_secret",   null: false
     t.string   "api_token",    null: false
-    t.string   "oauth_secret", null: false
-    t.string   "oauth_token",  null: false
+    t.string   "oauth_secret"
+    t.string   "oauth_token"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

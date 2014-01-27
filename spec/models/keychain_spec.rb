@@ -4,8 +4,6 @@ describe Keychain do
   describe 'validations' do
     it { should validate_presence_of :api_token }
     it { should validate_presence_of :api_secret }
-    it { should validate_presence_of :oauth_secret }
-    it { should validate_presence_of :oauth_token }
   end
 
   describe 'associations' do

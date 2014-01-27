@@ -4,8 +4,8 @@ class CreateKeychains < ActiveRecord::Migration
       t.integer :user_id
       t.string :api_secret,   null: false
       t.string :api_token,    null: false
-      t.string :oauth_secret, null: false
-      t.string :oauth_token,  null: false
+      t.string :oauth_secret
+      t.string :oauth_token
 
       t.timestamps
     end
