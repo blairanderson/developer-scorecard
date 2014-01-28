@@ -19,6 +19,7 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'rack-cors', :require => 'rack/cors'
+gem 'simple_enum'
 
 group :production do
  gem 'pg'
@@ -37,6 +38,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 2.0'
   gem 'launchy'
   gem 'dotenv-rails'
+  gem 'factory_girl_rails'
+  gem 'ffaker'
 end
 
 group :test do
