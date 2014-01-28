@@ -10,6 +10,7 @@ module ObjectCreationMethods
       uid: "321654",
       info: {
         name: "bob smith",
+        nickname: "bobsmith",
         image: "http://placehold.it/50/50",
         email: "example@example.com"},
       credentials: {

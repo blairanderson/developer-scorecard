@@ -6,7 +6,8 @@ class User < ActiveRecord::Base
 
   validates_presence_of :provider 
   validates_presence_of :uid 
-  validates_presence_of :email 
+  validates_presence_of :email
+  validates_presence_of :nickname
   validates_presence_of :encrypted_password 
   validates_presence_of :sign_in_count 
 
@@ -17,9 +18,10 @@ class User < ActiveRecord::Base
       user.provider = auth.provider
       user.uid = auth.uid
       user.keychain ||= Keychain.build_from_oauth(auth)
-      user.email = auth.info.email
       user.password = Devise.friendly_token[0,20]
       user.name = auth.info.name
+      user.nickname = auth.info.nickname
+      user.email = auth.info.email
       user.image = auth.info.image
       user.save!
     end
