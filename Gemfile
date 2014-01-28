@@ -35,7 +35,6 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'capybara'
   gem 'rspec-rails', '~> 2.0'
-  gem 'shoulda-matchers'
   gem 'launchy'
   gem 'dotenv-rails'
 end
@@ -43,5 +42,5 @@ end
 group :test do
   gem 'vcr', '2.8.0'
   gem 'webmock', '1.16'
-  gem 'minitest', require: 'minitest/autorun'
+  gem 'shoulda-matchers'
 end

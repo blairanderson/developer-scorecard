@@ -271,7 +271,6 @@ DEPENDENCIES
   guard-rspec
   jquery-rails
   launchy
-  minitest
   momentjs-rails (= 2.4.0)
   newrelic_rpm
   omniauth
