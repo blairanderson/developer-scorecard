@@ -12,6 +12,7 @@ describe User do
 
   describe 'associations' do
     it { should have_one(:keychain).dependent(:destroy) }
+    it { should have_many(:stats).dependent(:destroy) }
   end
 
   describe '.find_for_github_oauth' do

@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
   validates_presence_of :sign_in_count 
 
   has_one :keychain, dependent: :destroy
+  has_many :stats, dependent: :destroy
 
   def self.find_for_github_oauth(auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
