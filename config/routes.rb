@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_scope :user do
+    get '/', to: 'devise/sessions#new'
     match "logout", :to => "devise/sessions#destroy", via: [:delete, :get, :post]
   end
 
@@ -8,5 +9,7 @@ Rails.application.routes.draw do
   get 'dashboard' => 'dashboards#index', as: :dashboard
   resources :dashboards, except: [:index]
 
-  root :to => 'dashboards#new'
+  resources :assets, only: [:show]
+
+  root :to => 'devise/sessions#new'
 end

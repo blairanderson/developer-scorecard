@@ -1,5 +1,5 @@
 class AssetsController < ApplicationController
   layout false
-  def index
+  def show
   end
 end

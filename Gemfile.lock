@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/blairanderson/jquery-thedirt-rails.git
+  revision: 84bf5e58745520b05c8ccef402cf7f3b744648e1
+  specs:
+    jquery-thedirt-rails (0.0.1)
+      jquery-rails
+
+GIT
   remote: https://github.com/blairanderson/font-awesome-rails
   revision: af3685e91d147a930d593b56baa5020aa9e8654b
   specs:
@@ -280,6 +287,7 @@ DEPENDENCIES
   font-awesome-rails!
   guard-rspec
   jquery-rails
+  jquery-thedirt-rails!
   launchy
   momentjs-rails (= 2.4.0)
   newrelic_rpm

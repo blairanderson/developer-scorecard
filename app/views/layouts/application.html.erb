@@ -12,8 +12,6 @@
     <hr>
     <%= current_user.try(:keychain).try(:inspect) %>
     <%= link_to 'logout', logout_path, method: :delete %>
-  <% else %>
-    <%= link_to 'login', user_omniauth_authorize_path(:github), class: 'login' %>
   <% end %>
   <%= yield %>
 </body>
