@@ -7,4 +7,6 @@
 #= require report_card
 
 # for more details see: http://emberjs.com/guides/application/
-window.ReportCard = Ember.Application.create()
+window.ReportCard = Ember.Application.create({
+  LOG_TRANSITIONS: true
+  })

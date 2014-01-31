@@ -5,3 +5,14 @@
   (inside <code>app/assets/javascripts/templates/application.handlebars</code>) with your application's
   HTML.</p>
 </div>
+<div class="container">
+  <div class="col-md-3">
+    {{outlet left-sidebar}}
+  </div>
+  <div class="col-md-6">
+    {{outlet main}}
+  </div>
+  <div class="col-md-3">
+    {{outlet right-sidebar}}
+  </div>
+</div>

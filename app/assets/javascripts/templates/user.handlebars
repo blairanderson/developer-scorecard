@@ -1,0 +1,38 @@
+  user stuff
+{{id}}
+<hr>
+{{nickname}}
+<hr>
+{{provider}}
+<hr>
+{{uid}}
+<hr>
+{{name}}
+<hr>
+{{#if keychain}}
+  keychain_id: {{keychain.id}}
+{{/if}}
+<hr>
+{{image}}
+<hr>
+{{email}}
+<hr>
+{{remember_created_at}}
+<hr>
+{{sign_in_count}}
+<hr>
+{{current_sign_in_at}}
+<hr>
+{{last_sign_in_at}}
+<hr>
+{{current_sign_in_ip}}
+<hr>
+{{last_sign_in_ip}}
+<hr>
+{{created_at}}
+<hr>
+{{updated_at}}
+
+{{#each stat in stats}}
+  <li>stat {{stat}}</li>
+{{/each}}
