@@ -1,7 +1,6 @@
 # For more information see: http://emberjs.com/guides/routing/
 
 ReportCard.Router.map ()->
-  @route("user", path: "/" )
-  @resource('dashboard')
+  @resource('user', { path: '/u/:slug' });
 
 ReportCard.Router.reopen(rootURL: '/')

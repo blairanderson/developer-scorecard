@@ -3,7 +3,7 @@ ReportCard.UserRoute = Ember.Route.extend({
   //   this.controllerFor('user').set('model', model);
   // }
   model: function(params) {
-    return Ember.$.getJSON("/dashboards/blairanderson");
+    return Ember.$.getJSON("/dashboards/" + params.slug);
   },
 
   setupController: function(controller, model) {

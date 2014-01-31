@@ -1,4 +1,8 @@
 class UserSerializer < ActiveModel::Serializer
+  cached
+  def cache_key
+    [object]
+  end
   attributes  :id,
               :provider,
               :uid,
