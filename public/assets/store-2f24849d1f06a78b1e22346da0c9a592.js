@@ -1,0 +1,1 @@
+(function(){ReportCard.Store=DS.Store.extend({adapter:"DS.ActiveModelAdapter"})}).call(this);

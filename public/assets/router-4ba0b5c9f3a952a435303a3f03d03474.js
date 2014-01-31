@@ -1,0 +1,1 @@
+(function(){ReportCard.Router.map(function(){return this.route("user",{path:"/"}),this.resource("dashboard")}),ReportCard.Router.reopen({rootURL:"/"})}).call(this);
