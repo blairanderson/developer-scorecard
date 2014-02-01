@@ -1,4 +1,5 @@
 class StatSerializer < ActiveModel::Serializer
-  attributes :id, :type, :event
-
+  attributes  :id, 
+              :type,
+              :event
 end

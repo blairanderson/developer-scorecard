@@ -21,6 +21,7 @@ gem 'omniauth-github'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'simple_enum'
 gem 'jquery-thedirt-rails', git: 'git://github.com/blairanderson/jquery-thedirt-rails.git'
+gem 'httparty'
 
 group :production do
  gem 'pg'

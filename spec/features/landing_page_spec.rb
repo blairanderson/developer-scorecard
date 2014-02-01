@@ -9,7 +9,7 @@ describe DashboardsController do
   it 'redirects user to dashboard after login' do
     stub_omniauth_login
     visit root_path
-    click_on 'login'
+    find('a.login').click
     expect(current_path).to eq dashboard_path
   end
 end

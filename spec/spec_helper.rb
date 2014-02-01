@@ -44,3 +44,9 @@ RSpec.configure do |config|
   config.include ObjectCreationMethods
   config.include FactoryGirl::Syntax::Methods
 end
+
+VCR.configure do |c|
+  c.cassette_library_dir = 'spec/fixtures/vcr'
+  c.hook_into :webmock # or :fakeweb
+end
+

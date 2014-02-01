@@ -7,12 +7,7 @@ class Stat < ActiveRecord::Base
   validates_numericality_of :user_id
   validates_numericality_of :type_cd
 
-  as_enum :type, [:signup, :snapshot, :osrc]
+  as_enum :type, [:osrc]
+
   belongs_to :user, touch: true
-
-
-private
-  def event_source
-    OpenStruct.new(event)
-  end
 end

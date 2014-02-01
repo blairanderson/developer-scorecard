@@ -5,6 +5,7 @@ class AssetsController < UsersController
   end
 
   def index
+    ::UserStatSync.new(current_user).fetch
     render :show
   end
 end
