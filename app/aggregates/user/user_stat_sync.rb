@@ -1,4 +1,9 @@
 class UserStatSync
+  # work with controller before/after filter
+  def self.after(controller)
+    user = controller.instance_variable_get(:@user)
+    new(user).fetch
+  end
 
   def initialize(object=nil)
     @user = validate_aggregate(object)
@@ -16,12 +21,15 @@ class UserStatSync
   end
   
   def sync_osrc
-    @response = HTTParty.get("http://osrc.dfm.io/#{@user.nickname}.json")
     repo = repository(:osrc)
     repo.tap do |data|
-      data.event = @response.parsed_response
+      data.event = osrc_response.parsed_response
     end
     repo.save
+  end
+
+  def osrc_response
+    @response ||= HTTParty.get("http://osrc.dfm.io/#{@user.nickname}.json")
   end
 
   def repository(type=nil)
