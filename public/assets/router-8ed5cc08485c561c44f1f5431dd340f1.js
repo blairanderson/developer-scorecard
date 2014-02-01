@@ -1,1 +1,0 @@
-(function(){Caller.Router.map(function(){})}).call(this);
