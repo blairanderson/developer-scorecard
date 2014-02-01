@@ -1,5 +1,6 @@
 class DashboardsController < UsersController
   def index
+    ::UserStatSync.new(current_user).fetch
     @user = User.includes(:stats, :keychain).where(id: current_user.id).first
   end
 
