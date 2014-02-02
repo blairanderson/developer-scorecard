@@ -1,18 +1,36 @@
-{{#each event.connected_users}}
+{{profileBadge model}}
+
+<h3>
+  {{userLeader}}
+</h3>
+
+<p class="lead">
+  {{name}} is 
+{{!-- {{ week_type }} who works best
+{{#if best_time[0] < 12 }}
+  (around {{ best_time[0] }} am)
+{{else}}
+  (around {{ best_time[0]-12 }} pm)
+{{/if}}
+ --}}</p>
+
+connected users
+{{#each connected_users}}
   <div class="user-name">
-    {{name}}
-    {{link_to username "http://github.com/"}}
+    {{link_to_github_user username}}
   </div>
 {{/each}}
+
+repositories
 <ul>
-  {{#each event.repositories}}
+  {{#each repositories}}
     <li>{{count}} - {{repo}}</li>
   {{/each}}
 </ul>
+
+similar users
 <ul>
-  {{#each event.similar_users}}
-    <li>{{name}} - {{username}}</li>
+  {{#each similar_users}}
+    <li>{{name}} - {{link_to_github_user username}}</li>
   {{/each}}
 </ul>
-timezone: -7
-usage: {day:[58, 16, 6, 1, 0, 0, 0, 12, 42, 33, 38, 39, 46, 51, 75, 49, 46, 53, 50, 27, 31, 53, 79, 65],…}
