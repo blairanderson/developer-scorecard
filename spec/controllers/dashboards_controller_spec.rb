@@ -7,7 +7,7 @@ describe DashboardsController do
     let(:user) { create(:user) }
 
     before do
-      ::UserStatSync.stub(:after)      
+      ::ConnectionStatSync.stub(:after)
       sign_in :user, user
       get :index
     end

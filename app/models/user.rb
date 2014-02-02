@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   validates_presence_of :sign_in_count 
 
   has_one :keychain, dependent: :destroy
-  has_many :stats, dependent: :destroy
+  has_many :connections
 
   def self.find_for_github_oauth(auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
@@ -20,6 +20,7 @@ class User < ActiveRecord::Base
       user.uid = auth.uid
       user.keychain ||= Keychain.build_from_oauth(auth)
       user.password = Devise.friendly_token[0,20]
+      user.connections = Connection.where(identity: auth.info.nickname)
       user.name = auth.info.name
       user.nickname = auth.info.nickname
       user.email = auth.info.email

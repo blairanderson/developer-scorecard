@@ -3,7 +3,7 @@ FactoryGirl.define do
   factory :user do
     provider { 'github' }
     sequence(:uid)
-    name { Faker::Lorem.name }
+    name { Faker::Name.name }
     email { Faker::Internet.email }
     encrypted_password { SecureRandom.urlsafe_base64(12) }
     sequence(:sign_in_count)

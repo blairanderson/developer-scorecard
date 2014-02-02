@@ -12,7 +12,7 @@ describe User do
 
   describe 'associations' do
     it { should have_one(:keychain).dependent(:destroy) }
-    it { should have_many(:stats).dependent(:destroy) }
+    it { should have_many(:connections) }
   end
 
   describe '.find_for_github_oauth' do
@@ -20,6 +20,7 @@ describe User do
       user = User.find_for_github_oauth(omni_auth_attributes)
       expect(user).to be_valid
     end
+
     it 'finds an existing user' do
       user = User.find_for_github_oauth(omni_auth_attributes)
       expect(user).to be_valid
@@ -31,6 +32,18 @@ describe User do
     it 'creates an api key' do
       Keychain.should_receive(:build_from_oauth).with(omni_auth_attributes)
       User.find_for_github_oauth(omni_auth_attributes)
+    end
+
+    it 'finds a connection' do
+      connection = create(:connection, 
+        user_id: nil, 
+        provider_cd: 0, 
+        identity: omni_auth_attributes.info.nickname)
+
+      user = User.find_for_github_oauth(omni_auth_attributes)
+      user_connections = user.connections
+      expect(user_connections.count).to eq 1
+      expect(user_connections.first).to eq connection
     end
   end
 end

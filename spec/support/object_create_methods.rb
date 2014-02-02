@@ -1,6 +1,6 @@
 module ObjectCreationMethods
   def stub_omniauth_login
-    ::UserStatSync.stub(:after)  
+    ::ConnectionStatSync.stub(:after)  
     activate_omni_auth_test_mode
     OmniAuth.config.mock_auth[:github] = omni_auth_attributes
   end

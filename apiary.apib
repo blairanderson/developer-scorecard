@@ -2,13 +2,13 @@ FORMAT: 1A
 HOST: http://www.google.com
 
 # open-source-report-card
-Notes API is a *short texts saving* service similar to its physical paper presence on your table.
+Users API is a *short texts saving* service similar to its physical paper presence on your table.
 
-# Group Notes
-Notes related resources of the **Notes API**
+# Group Users
+User related resources of the **Users API**
 
-## Notes Collection [/notes]
-### List all Notes [GET]
+## Users Collection [/users]
+### List all Users [GET]
 + Response 200 (application/json)
 
         [{
@@ -17,31 +17,25 @@ Notes related resources of the **Notes API**
           "id": 2, "title": "Pick-up posters from post-office"
         }]
 
-### Create a Note [POST]
-+ Request (application/json)
 
-        { "title": "Buy cheese and bread for breakfast." }
-
-+ Response 201 (application/json)
-
-        { "id": 3, "title": "Buy cheese and bread for breakfast." }
-
-## Note [/notes/{id}]
-A single Note object with all its details
+## User [/users/{username}]
+A single user object with all its details
+Meta Data provided by a `meta_data` object
 
 + Parameters
-    + id (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
+    + id (required, text, `mojombo`) ... text `username` matching the github login.
 
-### Retrieve a Note [GET]
+### Retrieve a User [GET]
 + Response 200 (application/json)
 
-    + Header
-
-            X-My-Header: The Value
-
     + Body
+            {
+                user: {
 
-            { "id": 2, "title": "Pick-up posters from post-office" }
-
-### Remove a Note [DELETE]
-+ Response 204
+                },
+                meta_object: {
+                    total_users: 11,
+                    busy_users: [],
+                    popular_users: []
+                }
+            }

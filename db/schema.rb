@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140128061112) do
+ActiveRecord::Schema.define(version: 20140202175646) do
+
+  create_table "connections", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "provider_cd", default: 0,  null: false
+    t.string   "identity",    default: "", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "connections", ["provider_cd"], name: "index_connections_on_provider_cd"
+  add_index "connections", ["user_id", "provider_cd"], name: "by_user_and_provider", unique: true
+  add_index "connections", ["user_id"], name: "index_connections_on_user_id"
 
   create_table "keychains", force: true do |t|
     t.integer  "user_id"
@@ -26,16 +38,16 @@ ActiveRecord::Schema.define(version: 20140128061112) do
   add_index "keychains", ["user_id"], name: "index_keychains_on_user_id"
 
   create_table "stats", force: true do |t|
-    t.integer  "user_id",    default: 0,  null: false
-    t.integer  "type_cd",    default: 0,  null: false
-    t.text     "event",      default: "", null: false
+    t.integer  "connection_id", default: 0,  null: false
+    t.integer  "type_cd",       default: 0,  null: false
+    t.text     "event",         default: "", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  add_index "stats", ["connection_id", "type_cd"], name: "index_stats_on_connection_id_and_type_cd"
+  add_index "stats", ["connection_id"], name: "index_stats_on_connection_id"
   add_index "stats", ["type_cd"], name: "index_stats_on_type_cd"
-  add_index "stats", ["user_id", "type_cd"], name: "index_stats_on_user_id_and_type_cd"
-  add_index "stats", ["user_id"], name: "index_stats_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "provider",            default: "", null: false
