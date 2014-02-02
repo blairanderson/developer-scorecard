@@ -1,7 +1,7 @@
 module ApplicationHelper
 
   def preview_path(user)
-    assets_path(anchor: "/u/#{user.nickname}")
+    assets_path(anchor: "/users/#{user.nickname}")
   end
 
   def t(translation, options={})

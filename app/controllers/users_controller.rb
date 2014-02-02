@@ -13,7 +13,6 @@ class UsersController < ApplicationController
     render json: @connection, root: 'connection', meta: meta, meta_key: 'meta_object'
   end
 
-
   def fetch_github_stats
     ConnectionStatSync.new("github", params[:id]).fetch
   end
