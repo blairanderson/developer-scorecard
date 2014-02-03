@@ -1,4 +1,4 @@
-ReportCard.OsrcController = Ember.ObjectController.extend({
+ReportCard.GithubOsrcController = Ember.ObjectController.extend({
   userLeader: function() {
     var list, name, usage, result;
     usage = this.get("model.usage");

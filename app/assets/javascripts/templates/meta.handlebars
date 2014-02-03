@@ -1,0 +1,19 @@
+<h1>{{total_users}}</h1>
+
+busy users
+<ul class="list-unstyled">
+  {{#each busy_users}}
+    <li>
+      {{#link-to 'user' nickname}} {{name}} - {{nickname}} {{/link-to}}
+    </li>
+  {{/each}}
+</ul>
+
+popular users
+<ul class="list-unstyled">
+  {{#each popular_users}}
+    <li>
+      {{#link-to 'user' nickname}} {{name}} - {{nickname}} {{/link-to}}
+    </li>
+  {{/each}}
+</ul>

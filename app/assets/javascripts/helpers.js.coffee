@@ -18,7 +18,7 @@ Ember.Handlebars.helper 'profileBadge', (model) ->
   result = "<div>"
   result += "<a href='https://github.com/#{model.username}' target='_blank'>"
   result += "<img height='50' width='50' alt='#{model.username}' class='avatar' src='https://secure.gravatar.com/avatar/#{model.gravatar}?s=220&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png'>"
-  result += "<span class='profile-name'>#{model.name}</span>"
+  result += "<h1 class='profile-name'>#{model.name}</h1>"
   result += "</a>"
   result += "</div>"
 
