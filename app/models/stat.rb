@@ -7,7 +7,7 @@ class Stat < ActiveRecord::Base
   validates_numericality_of :connection_id
   validates_numericality_of :type_cd
 
-  as_enum :type, [:osrc]
+  as_enum :type, [:github_osrc]
 
   belongs_to :connection, touch: true
 end

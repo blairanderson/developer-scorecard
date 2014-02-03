@@ -21,7 +21,23 @@ describe ConnectionStatSync do
       expect(service.user).to eq  connection.reload.user
     end
   end
-  describe 'syncing' do
+
+  let(:events) { Stat.types.keys }
+
+  Connection.providers.keys.each do |provider|
+    it "requires instance method ##{provider}_event_urls to properly include API urls" do
+      expect{ service.send("#{provider}_event_urls") }.to_not raise_error
+    end
+
+    it "##{provider}_event_urls are missing from Stat.types enum list" do
+      service.send("#{provider}_event_urls").each do |type, url|
+        expect(Stat.types.keys).to include(type)
+      end
+    end
+  end
+
+
+  describe 'fetching' do
     describe '#osrc' do
       it 'creates an event' do
         VCR.use_cassette('mojombo_osrc') do
@@ -53,9 +69,9 @@ describe ConnectionStatSync do
   end
 
   describe '#fetch' do
-    it 'attempts to fetch all stats types' do
-      Stat.types.keys.each do |type|
-        service.should_receive("sync_#{type.to_s}").and_return(true)
+    it 'attempts to fetch all stats types for the given provider' do
+      keys = service.send("#{service.provider}_event_urls").each do |event, url|
+        service.should_receive(:sync).with(event.to_sym, url).and_return(true)
       end
       service.fetch
     end
