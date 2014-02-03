@@ -1,0 +1,1 @@
+(function(){ReportCard.Router.map(function(){return this.route("user",{path:"/users/:slug"}),this.route("github",{path:"/github/:slug"})}),ReportCard.Router.reopen({rootURL:"/"})}).call(this);
