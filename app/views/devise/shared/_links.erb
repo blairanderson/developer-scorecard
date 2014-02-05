@@ -20,9 +20,7 @@
 
 <%- if devise_mapping.omniauthable? %>
   <%- resource_class.omniauth_providers.each do |provider| %>
-    <%= link_to t("devise.shared.omniauthable", provider: provider.to_s.titleize), omniauth_authorize_path(resource_name, provider), options.tap{|key, value| value += "#{provider} login" if key == :class} do %>
-      <%= content_tag :span, options.tap{|key, value| value += "#{provider} login" if key == :class} %>
-    <% end -%>
+    <%= link_to t("devise.shared.omniauthable", provider: provider.to_s.titleize), omniauth_authorize_path(resource_name, provider), options %>
     
     <br />
   <% end -%>
