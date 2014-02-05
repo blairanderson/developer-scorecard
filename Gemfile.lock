@@ -1,16 +1,15 @@
 GIT
-  remote: git://github.com/blairanderson/jquery-thedirt-rails.git
-  revision: 84bf5e58745520b05c8ccef402cf7f3b744648e1
-  specs:
-    jquery-thedirt-rails (0.0.1)
-      jquery-rails
-
-GIT
   remote: https://github.com/blairanderson/font-awesome-rails
   revision: af3685e91d147a930d593b56baa5020aa9e8654b
   specs:
     font-awesome-rails (4.0.3.0)
       railties (>= 3.2, < 5.0)
+
+PATH
+  remote: gems/bootstrap-sass-rails
+  specs:
+    bootstrap-sass (3.1.0.1)
+      sass (~> 3.2)
 
 GEM
   remote: https://rubygems.org/
@@ -56,8 +55,6 @@ GEM
       erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bootstrap-sass (3.0.3.0)
-      sass (~> 3.2)
     builder (3.2.2)
     capybara (2.2.1)
       mime-types (>= 1.16)
@@ -278,7 +275,7 @@ DEPENDENCIES
   active_model_serializers
   better_errors
   binding_of_caller
-  bootstrap-sass
+  bootstrap-sass!
   capybara
   coffee-rails (~> 4.0.0)
   devise
@@ -291,7 +288,6 @@ DEPENDENCIES
   guard-rspec
   httparty
   jquery-rails
-  jquery-thedirt-rails!
   launchy
   momentjs-rails (= 2.4.0)
   newrelic_rpm

@@ -6,7 +6,7 @@ gem 'sass-rails', '~> 4.0.0.rc1'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', path: 'gems/bootstrap-sass-rails'
 gem 'font-awesome-rails', git: 'https://github.com/blairanderson/font-awesome-rails'
 gem 'momentjs-rails', '2.4.0'
 
@@ -20,7 +20,6 @@ gem 'omniauth'
 gem 'omniauth-github'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'simple_enum'
-gem 'jquery-thedirt-rails', git: 'git://github.com/blairanderson/jquery-thedirt-rails.git'
 gem 'httparty'
 
 group :production do
