@@ -16,13 +16,9 @@ ReportCard.UserRoute = Ember.Route.extend({
     this.controllerFor('meta').set('model', model.meta_object);
   },
   renderTemplate: function() {
-    this.render('github_osrc', {       // the template to render
-      outlet: 'main',
-      controller: 'github_osrc'        // the controller to use for the template
-    });
-    this.render('meta', {
-      outlet: 'left-sidebar',
-      controller: 'meta'
-    });
+    this.render('callout', {outlet: 'callout'});
+    this.render('jumbo', {outlet: 'jumbo'});
+    this.render('github_osrc', {outlet: 'main', controller: 'github_osrc'});
+    this.render('meta', {outlet: 'left-sidebar', controller: 'meta'});
   }
 });

@@ -1,0 +1,36 @@
+a.action {
+  @extend .btn;
+  // @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $border-radius-large);
+}
+$emerald: #2ecc71;
+$login-out-color: $emerald;
+$btn-login-out-bg: $login-out-color;
+$btn-login-out-color: #fff;
+$btn-login-out-border: lighten($login-out-color, 20%);
+a.login-out {
+  @include button-size(5px, 100px, 16px, $line-height-large, 3px);
+  @include button-variant($btn-login-out-color, $btn-login-out-bg, $btn-login-out-border);
+  span.icon-login-out {
+    @include icon-flash($font-size: 16px);
+  }
+  &:hover{
+    $button-hover: 27%;
+    @include button-variant(lighten($btn-login-out-color, $button-hover), lighten($btn-login-out-bg, $button-hover), lighten($btn-login-out-border, $button-hover));
+  } 
+}
+$gangreen: #1abc9c;
+$callout-color: $gangreen;
+$btn-callout-bg: $callout-color;
+$btn-callout-color: #fff;
+$btn-callout-border: lighten($callout-color, 20%);
+a.callout {
+  @include button-variant($btn-callout-color, $btn-callout-bg, $btn-callout-border);
+  @include button-size(5px, 100px, 16px, $line-height-large, 3px);
+  span.icon-callout {
+    @include icon-flash($font-size: 16px);
+  }
+  &:hover{
+    $button-hover: 27%;
+    @include button-variant(lighten($btn-callout-color, $button-hover), lighten($btn-callout-bg, $button-hover), lighten($btn-callout-border, $button-hover));
+  } 
+}

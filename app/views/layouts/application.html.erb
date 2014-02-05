@@ -7,12 +7,49 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <% if user_signed_in? %>
-    <%= current_user.inspect %>
-    <hr>
-    <%= current_user.try(:keychain).try(:inspect) %>
-    <%= link_to 'logout', logout_path, method: :delete %>
-  <% end %>
-  <%= yield %>
+    <div class="container">
+      <div class="row row-offcanvas row-offcanvas-right">
+        <div class="col-xs-12 col-sm-9">
+          <p class="pull-right visible-xs clearfix">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+          </p>
+          <% if user_signed_in? %>
+            <p class="pull-left clearfix">
+              <%= link_to 'logout', logout_path, class: 'action login-out', method: :delete %>
+            </p>
+          <% else %>
+            <p class="pull-left clearfix">
+              <%= render "devise/shared/links", options: {class: "action login-out"} %>
+            </p>
+          <% end %>
+          <div class="jumbotron">
+            <%= yield %>
+            <p>Authenticate with github and donate your open-source-reports to the internet.</p>
+          </div>
+          <div class="row">
+            <div class="col-6 col-sm-6 col-lg-4">
+              <h2>Heading</h2>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            </div><!--/span-->
+          </div><!--/row-->
+        </div><!--/span-->
+
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+          <div class="list-group">
+            <a href="#" class="list-group-item active">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+          </div>
+        </div><!--/span-->
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        <p>&copy; Company 2014</p>
+      </footer>
+
+    </div><!--/.container-->
+
 </body>
 </html>
