@@ -1,0 +1,27 @@
+.transition {
+  left: 50%;
+  position: fixed;
+  width: 200px;
+  top: 10%;
+  margin-left: -121px;
+  margin-top: -60px;
+  z-index: 100;
+  text-align: center;
+  span {
+    font-weight: 700;
+    font-size: 22px;
+    position: absolute;
+    display: block;
+    width: 200px;
+    @include border-radius(6px);
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    padding: 20px 20px 80px;
+    background: #fff url(<%= asset_data_uri "loading.gif" %>) center 50px no-repeat;
+    text-align: center;
+    border: 1px solid #111;
+  }
+  &.loading {span {color: $gangreen;}}
+  &.error {span {color: red;}}
+}
