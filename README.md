@@ -25,3 +25,7 @@ Similar data to http://osrc.dfm.io/blairanderson but be embeddable. I like peopl
 I think of the user_route as a `before_filter` to the controllers.
 
 Inside the `user_route.js`
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/blairanderson/open-source-report-card/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
