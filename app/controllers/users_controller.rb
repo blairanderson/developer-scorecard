@@ -14,6 +14,8 @@ class UsersController < ApplicationController
   end
 
   def fetch_github_stats
-    ConnectionStatSync.new("github", params[:id]).fetch
+    # unless (@connections || @connection)
+      ConnectionStatSync.new("github", params[:id]).fetch
+    # end
   end
 end
