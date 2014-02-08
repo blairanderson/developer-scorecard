@@ -34,27 +34,10 @@ div#navigation {
     li {
       a {
         @include nav-link;
-        &.user {
-          span {
-            @include icon-user($font-size: 16px);
-          }
-        }
-        &.connections {
-          span {
-            @include icon-comment($font-size: 16px);
-          }
-        }
-        &.stats {
-          span {
-            @include icon-stats($font-size: 16px);
-          }
-        }
-      }
-    }
+        &.user {span {@include icon-user($font-size: 16px);}}
+        &.connections {span {@include icon-comment($font-size: 16px);}}
+        &.stats {span {@include icon-stats($font-size: 16px);}}}}
     form.navbar-form {
-      // margin: 0px !important;
-      // margin-top: 0px !important;
-      // margin-bottom: 0px !important;
     }
   }
 
