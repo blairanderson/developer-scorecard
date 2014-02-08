@@ -8,6 +8,7 @@ ReportCard.DashboardRoute = Ember.Route.extend({
   setupController: function(controller, model) {
     var user = model.user
     this.controllerFor('user').set('model', user);
+    this.controllerFor('navigation').set('model', user);
 
     var connections = model.user.connections
     for (var i = 0; i < connections.length; i++) {
@@ -21,9 +22,18 @@ ReportCard.DashboardRoute = Ember.Route.extend({
     this.controllerFor('meta').set('model', model.meta_object);
   },
   renderTemplate: function() {
-    this.render('navigation', {outlet: 'callout'});
-    this.render('dashboard', {outlet: 'left-sidebar', controller: 'user'});
-    this.render('github_osrc', {outlet: 'main', controller: 'github_osrc'});
+    this.render('navigation', {
+      outlet: 'callout', 
+      controller: 'navigation'
+    });
+    this.render('dashboard', {
+      outlet: 'left-sidebar', 
+      controller: 'user'
+    });
+    this.render('github_osrc', {
+      outlet: 'main', 
+      controller: 'github_osrc'
+    });
   //   this.render('meta', {outlet: 'left-sidebar', controller: 'meta'});
   }
 });

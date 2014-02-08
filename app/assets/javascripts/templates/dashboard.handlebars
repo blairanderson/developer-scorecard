@@ -1,22 +1,55 @@
-{{{link_to "dashboard" '/' }}}:
-<hr>
-Today's date: {{currentDate}}
-Current Time: {{currentTime}}
-<hr>
-<hr>
-{{name}}
-<img {{bind-attr src=image}} alt="Logo">
-<hr>
-{{nickname}} - {{provider}} - {{uid}}
-<hr>
-{{email}}
-<hr>
-{{sign_in_count}}
-<hr>
-{{current_sign_in_at}}
-<hr>
-{{last_sign_in_at}}
-<hr>
-{{created_at}}
-<hr>
-{{updated_at}}
+<div class="row" id="navigation">
+  {{#link-to 'dashboard' class="navbar-brand" }}YourPublicReportCard{{/link-to}}
+</div>
+<div class="row">
+  <div class="sidebar-image">
+    <img {{bind-attr src=image}} alt="Logo" class="img-responsive center-block">
+  </div>
+  <div class="sidebar-panel">
+    <div class="header">
+      {{name}}
+    </div>
+    <div>
+      <p class="lead">
+        <a target="_blank" {{bindAttr href="targetUrl"}}>{{nickname}}</a>
+      </p>
+      <p class="lead">
+        {{userLeader}}
+      </p>
+    </div>
+    <div>rating</div>
+    <ul class="nav nav-pills nav-justified">
+      <li>
+        {{#link-to 'dashboard' class="btn-default"}}Follow{{/link-to}}
+      </li>
+      <li>
+        {{#link-to 'dashboard' class="btn-primary"}}Chat{{/link-to}}
+      </li>
+    </ul>
+  </div>
+  <div class="sidebar-list">
+    <a href="#" class="sidebar-list-item">{{currentDate}}</a>
+    <hr>
+    <a href="#" class="sidebar-list-item">{{currentTime}}</a>
+    <hr>
+    <a href="#" class="sidebar-list-item"> {{nickname}} - {{provider}} - {{uid}} </a>
+    <hr>
+    <a href="#" class="sidebar-list-item">{{email}}</a>
+    <hr>
+    <a href="#" class="sidebar-list-item">{{sign_in_count}}</a>
+    <hr>
+    <a href="#" class="sidebar-list-item">{{current_sign_in_at}}</a>
+    <hr>
+    <a href="#" class="sidebar-list-item">{{last_sign_in_at}}</a>
+    <hr>
+    <a href="#" class="sidebar-list-item">{{created_at}}</a>
+    <hr>
+    <a href="#" class="sidebar-list-item">{{updated_at}}</a>
+    <hr>
+  </div>
+</div>
+
+
+
+
+

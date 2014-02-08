@@ -1,0 +1,53 @@
+$sidebar-background: #373634; 
+$sidebar-text-color: white;
+$sidebar-padding: 15px;
+
+@mixin sidebar-background(){
+  background-color: #373634;
+  background-image: -webkit-gradient(radial, 50% 50%,0,50% 50%,200, from(rgb(38, 38, 38)), to(rgb(55, 54, 52)));
+  background-image: -webkit-radial-gradient(50% 50%, rgb(55, 54, 52), rgb(38, 38, 38));
+  background-image: -moz-radial-gradient(50% 50%, rgb(55, 54, 52), rgb(38, 38, 38));
+  background-image: -o-radial-gradient(50% 50%, rgb(55, 54, 52), rgb(38, 38, 38));
+  background-image: -ms-radial-gradient(50% 50%, rgb(55, 54, 52), rgb(38, 38, 38));
+  background-image: radial-gradient(50% 50%, rgb(55, 54, 52), rgb(38, 38, 38));
+}
+
+#sidebar {
+  padding-right: 0px;
+}
+
+.sidebar-image {
+  border-bottom: solid 5px $gangreen;
+}
+.sidebar-panel {
+  div{
+    &.header{
+      font-size: 36px;
+      display: block;
+    }
+  }
+  ul {
+    li{
+      a{}}}
+  @include sidebar-background();
+}
+
+.sidebar-list {
+  height: 600px;
+  a.sidebar-list-item {
+    &.active {}
+  }
+  background-color: #373633;
+  background-image: -webkit-gradient(radial, 50% 50%,0,50% 50%,200, from(rgb(55, 54, 52)), to(rgb(55, 54, 51)));
+  background-image: -webkit-radial-gradient(50% 50%, rgb(55, 54, 51), rgb(55, 54, 52));
+  background-image: -moz-radial-gradient(50% 50%, rgb(55, 54, 51), rgb(55, 54, 52));
+  background-image: -o-radial-gradient(50% 50%, rgb(55, 54, 51), rgb(55, 54, 52));
+  background-image: -ms-radial-gradient(50% 50%, rgb(55, 54, 51), rgb(55, 54, 52));
+  background-image: radial-gradient(50% 50%, rgb(55, 54, 51), rgb(55, 54, 52));
+}
+
+.sidebar-panel, .sidebar-list {
+  min-height: 150px;
+  color: $sidebar-text-color;
+  padding: $sidebar-padding;
+}

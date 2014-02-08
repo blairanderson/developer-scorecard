@@ -8,39 +8,30 @@
 </head>
 <body>
     <div class="container">
-      <div class="row row-offcanvas row-offcanvas-left">
-        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
-          <%= render 'shared/sidebar_navigation' if current_user %>
-        </div>
-        <div class="col-xs-12 col-sm-9">
-
-          <%= render 'shared/navigation' %>
-
-          <p class="pull-left visible-xs clearfix">
-            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle Profile</button>
-          </p>
-          <div class="jumbotron">
-            <%= yield %>
-            <p>Authenticate with github and donate your open-source-reports to the internet.</p>
+      <% if current_user %>
+        <div class="row row-offcanvas row-offcanvas-left">
+          <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+            <%= render 'shared/sidebar_navigation'%>
           </div>
-          <div class="row">
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div><!--/span-->
-          </div><!--/row-->
-        </div><!--/span-->
-
-
-      </div><!--/row-->
-
-      <hr>
-
-      <footer>
-        <p>&copy; Company 2014</p>
-      </footer>
-
+          <div class="col-xs-12 col-sm-9">
+            <%= render 'shared/navigation'%>
+            <p class="pull-left visible-xs clearfix">
+              <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle Profile</button>
+            </p>
+            <div class="jumbotron">
+              <%= yield %>
+            </div>
+            <div class="row">
+              <%= render @connections if @connections %>
+            </div><!--/row-->
+          </div><!--/span-->
+        </div><!--/row-->
+      <% else %>
+      <div class="jumbotron">
+        <%= yield %>
+      </div>
+      
+      <% end %>
     </div><!--/.container-->
 
 </body>

@@ -1,23 +1,26 @@
 <div class="row" id="navigation">
   <div class="col-sm-3">
-    <ul class="nav nav-pills nav-justified">
-      <li class="active">
-        <a href="#" class="user">u</a>
-      </li>
-      <li>
-        <a href="#" class="connections">c</a>
-      </li>
-      <li>
-        <a href="#" class="stats">s</a>
-      </li>
+    <ul class="nav nav-justified">
+      <li><a href="#" class="user"><span></span></a></li>
+      <li><a href="#" class="connections"><span></span></a></li>
+      <li><a href="#" class="stats"><span></span></a></li>
     </ul>
   </div>
-  <div class="col-sm-9">
+  <div class="col-sm-6">
     <form class="navbar-form" role="search">
       <div class="form-group">
-        <input type="text" class="form-control col-lg-9" placeholder="Search">
+        <input type="search" class="form-control" placeholder="Search">
       </div>
       <button type="submit" class="btn btn-default">Go!</button>
     </form>
+  </div>
+  <div class="col-sm-3">
+    <ul class="nav dropdown">
+      <li>
+        <a class="dropdown-trigger" id="dropdownMenu1" data-target="#" data-toggle="dropdown">
+          {{name}}
+        </a>
+      </li>
+    </ul>
   </div>
 </div>
