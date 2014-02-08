@@ -20,6 +20,6 @@ class UserSerializer < ActiveModel::Serializer
               :created_at,
               :updated_at
 
-  has_many :stats
+  has_many :connections
   has_one :keychain
 end

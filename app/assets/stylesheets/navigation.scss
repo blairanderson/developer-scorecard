@@ -1,0 +1,23 @@
+div#navigation {
+  ul.nav {
+    li {
+      &.active{}
+      a {
+        .user {
+          @include icon-flash($font-size: 16px);
+        }
+        .connections {
+          @include icon-flash($font-size: 16px);
+        }
+        .stats {
+          @include icon-flash($font-size: 16px);
+        }
+      }
+    }
+    form.navbar-form {
+      margin: 0px !important;
+      margin-top: 0px !important;
+      margin-bottom: 0px !important;
+    }
+  }
+}

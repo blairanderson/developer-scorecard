@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/ghempton/ember-script-rails.git
+  revision: 9a1f09b0c53bf51c37c35490cc76cd7dfe461234
+  specs:
+    ember_script-rails (0.0.3)
+      ember_script (>= 0.0.4)
+      rails
+
+GIT
   remote: https://github.com/blairanderson/font-awesome-rails
   revision: af3685e91d147a930d593b56baa5020aa9e8654b
   specs:
@@ -98,6 +106,11 @@ GEM
       railties (>= 3.1)
     ember-source (1.3.1.1)
       handlebars-source (~> 1.2.1)
+    ember_script (0.0.5)
+      ember_script-source (>= 0.0.2)
+      execjs
+      tilt
+    ember_script-source (0.0.12)
     erubis (2.7.0)
     execjs (2.0.2)
     factory_girl (4.3.0)
@@ -280,8 +293,10 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise
   dotenv-rails
+  ember-data-source
   ember-rails
   ember-source
+  ember_script-rails!
   factory_girl_rails
   ffaker
   font-awesome-rails!

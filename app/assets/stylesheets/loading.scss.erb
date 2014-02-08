@@ -18,10 +18,12 @@
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
     padding: 20px 20px 80px;
-    background: #fff url(<%= asset_data_uri "loading.gif" %>) center 50px no-repeat;
     text-align: center;
     border: 1px solid #111;
   }
-  &.loading {span {color: $gangreen;}}
+  &.loading {
+    background: #fff url(<%= asset_data_uri "loading.gif" %>) center 50px no-repeat;
+    span {color: $gangreen;}
+  }
   &.error {span {color: red;}}
 }
