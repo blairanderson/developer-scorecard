@@ -1,0 +1,29 @@
+<div class="row" id="navigation">
+  <%= link_to "#YourPublicReportCard", dashboard_path, class: "navbar-brand" %>
+</div>
+
+<div class="row">
+  <div class="sidebar-panel">
+    <%= image_tag current_user.image, class: 'img-responsive', style: 'width: 100%; max-height: 130px; border-bottom: solid 5px blue;' %>
+  </div>
+  <div class="sidebar-panel">
+    <h1>
+      <%= current_user.name %>
+    </h1>
+    <span>status icon</span>
+    <span>location - domain stuf</span>
+    <ul class="nav nav-pills nav-justified">
+      <li>
+        <button type="button" class="btn btn-block btn-default">Follow</button>
+      </li>
+      <li>
+        <button type="button" class="btn btn-block btn-primary">Chat</button>
+      </li>
+    </ul>
+  </div>
+  <div class="sidebar-list">
+    <a href="#" class="sidebar-list-item active">Link</a>
+    <a href="#" class="sidebar-list-item">Link</a>
+  </div>
+</div>
+

@@ -1,23 +1,72 @@
+@mixin nav-link(){
+  padding: 0;
+  line-height: 50px;
+  height: 50px;
+  color: white;
+  &:hover {
+    line-height: 50px;
+    height: 50px;
+    color: black;
+    background: white;
+  }
+}
+
 div#navigation {
+  margin-bottom: 15px;
+  background: $gangreen;
+
+  .navbar-brand {
+    color: white;
+    float: left;
+    padding: 0px 0px 0px 15px;
+    font-size: 18px;
+    line-height: 50px;
+    height: 50px;
+    width: 100%;
+    &:hover {
+      color: black;
+      background: white;   
+    }
+  }
   ul.nav {
+    border-left: 1px solid white;
+    border-right:  1px solid white;
     li {
-      &.active{}
       a {
-        .user {
-          @include icon-flash($font-size: 16px);
+        @include nav-link;
+        &.user {
+          span {
+            @include icon-user($font-size: 16px);
+          }
         }
-        .connections {
-          @include icon-flash($font-size: 16px);
+        &.connections {
+          span {
+            @include icon-comment($font-size: 16px);
+          }
         }
-        .stats {
-          @include icon-flash($font-size: 16px);
+        &.stats {
+          span {
+            @include icon-stats($font-size: 16px);
+          }
         }
       }
     }
     form.navbar-form {
-      margin: 0px !important;
-      margin-top: 0px !important;
-      margin-bottom: 0px !important;
+      // margin: 0px !important;
+      // margin-top: 0px !important;
+      // margin-bottom: 0px !important;
+    }
+  }
+
+  div {
+    ul.dropdown {
+      border-right: none;
+      li {
+        cursor: pointer;
+        a.dropdown-trigger {
+          padding-left: 20px;
+        }
+      }
     }
   }
 }
