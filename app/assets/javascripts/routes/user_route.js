@@ -1,7 +1,7 @@
 ReportCard.UserRoute = Ember.Route.extend({
   model: function(params) {
-    // return Ember.$.getJSON("/users/" + params.slug);
-    return ReportCard.User.find(params.slug)
+    return Ember.$.getJSON("/users/" + params.slug);
+    // return ReportCard.User.find(params.slug)
   },
 
   setupController: function(controller, model) {
