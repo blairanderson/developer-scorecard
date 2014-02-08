@@ -13,13 +13,13 @@ We let people add/remove from the list with basic markup.
 
 ```ruby
 
-	x <--- /users 			#Users#new
-	x <--- /users 			#Users#index
-	x ---> /users 			#Users#create
-	x <--- /users/:id		#Users#show
-	x <--- /users/:id/edit #Users#edit
-	x ---> /users/:id		#USers#update
-	XxxxxX /users/:id		#Users#destroy
+	x <--- /users 			=> Users#new
+	x <--- /users 			=> Users#index
+	x ---> /users 			=> Users#create
+	x <--- /users/:id		=> Users#show
+	x <--- /users/:id/edit 	=> Users#edit
+	x ---> /users/:id		=> Users#update
+	XxxxxX /users/:id		=> Users#destroy
 	
 	
 ```
