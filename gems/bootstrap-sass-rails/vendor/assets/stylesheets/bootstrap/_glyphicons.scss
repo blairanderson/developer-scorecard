@@ -31,1203 +31,404 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-$icon-prefix: '';
-
 // Individual icons
 
-@mixin icon-flash($font-size: 12px){
-  @include icon($font-size: $font-size);
-  &:before { content: "\e162"; } 
-}
+@mixin icon-flash($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e162"; } }
 
-@mixin icon-asterisk(){
-  @include icon();
-  &:before { content: "\2a"; } 
-}
+@mixin icon-user($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e008"; } }
 
+@mixin icon-stats($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e185"; } }
 
-@mixin icon-plus(){
-  @include icon();
-  &:before { content: "\2b"; } 
-}
+@mixin icon-comment($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e111"; } }
 
+@mixin icon-asterisk($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\2a"; } }
 
-@mixin icon-euro(){
-  @include icon();
-  &:before { content: "\20ac"; } 
-}
+@mixin icon-plus($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\2b"; } }
 
+@mixin icon-euro($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\20ac"; } }
 
-@mixin icon-minus(){
-  @include icon();
-  &:before { content: "\2212"; } 
-}
+@mixin icon-minus($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\2212"; } }
 
+@mixin icon-cloud($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\2601"; } }
 
-@mixin icon-cloud(){
-  @include icon();
-  &:before { content: "\2601"; } 
-}
+@mixin icon-envelope($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\2709"; } }
 
+@mixin icon-pencil($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\270f"; } }
 
-@mixin icon-envelope(){
-  @include icon();
-  &:before { content: "\2709"; } 
-}
+@mixin icon-glass($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e001"; } }
 
+@mixin icon-music($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e002"; } }
 
-@mixin icon-pencil(){
-  @include icon();
-  &:before { content: "\270f"; } 
-}
+@mixin icon-search($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e003"; } }
 
+@mixin icon-heart($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e005"; } }
 
-@mixin icon-glass(){
-  @include icon();
-  &:before { content: "\e001"; } 
-}
+@mixin icon-star($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e006"; } }
 
+@mixin icon-star-empty($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e007"; } }
 
-@mixin icon-music(){
-  @include icon();
-  &:before { content: "\e002"; } 
-}
+@mixin icon-film($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e009"; } }
 
+@mixin icon-th-large($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e010"; } }
 
-@mixin icon-search(){
-  @include icon();
-  &:before { content: "\e003"; } 
-}
+@mixin icon-th($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e011"; } }
 
+@mixin icon-th-list($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e012"; } }
 
-@mixin icon-heart(){
-  @include icon();
-  &:before { content: "\e005"; } 
-}
+@mixin icon-ok($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e013"; } }
 
+@mixin icon-remove($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e014"; } }
 
-@mixin icon-star(){
-  @include icon();
-  &:before { content: "\e006"; } 
-}
+@mixin icon-zoom-in($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e015"; } }
 
+@mixin icon-zoom-out($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e016"; } }
 
-@mixin icon-star-empty(){
-  @include icon();
-  &:before { content: "\e007"; } 
-}
+@mixin icon-off($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e017"; } }
 
+@mixin icon-signal($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e018"; } }
 
-@mixin icon-user(){
-  @include icon();
-  &:before { content: "\e008"; } 
-}
+@mixin icon-cog($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e019"; } }
 
+@mixin icon-trash($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e020"; } }
 
-@mixin icon-film(){
-  @include icon();
-  &:before { content: "\e009"; } 
-}
+@mixin icon-home($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e021"; } }
 
+@mixin icon-file($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e022"; } }
 
-@mixin icon-th-large(){
-  @include icon();
-  &:before { content: "\e010"; } 
-}
+@mixin icon-time($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e023"; } }
 
+@mixin icon-road($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e024"; } }
 
-@mixin icon-th(){
-  @include icon();
-  &:before { content: "\e011"; } 
-}
+@mixin icon-download-alt($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e025"; } }
 
+@mixin icon-download($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e026"; } }
 
-@mixin icon-th-list(){
-  @include icon();
-  &:before { content: "\e012"; } 
-}
+@mixin icon-upload($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e027"; } }
 
+@mixin icon-inbox($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e028"; } }
 
-@mixin icon-ok(){
-  @include icon();
-  &:before { content: "\e013"; } 
-}
+@mixin icon-play-circle($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e029"; } }
 
+@mixin icon-repeat($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e030"; } }
 
-@mixin icon-remove(){
-  @include icon();
-  &:before { content: "\e014"; } 
-}
+@mixin icon-refresh($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e031"; } }
 
+@mixin icon-list-alt($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e032"; } }
 
-@mixin icon-zoom-in(){
-  @include icon();
-  &:before { content: "\e015"; } 
-}
+@mixin icon-lock($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e033"; } }
 
+@mixin icon-flag($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e034"; } }
 
-@mixin icon-zoom-out(){
-  @include icon();
-  &:before { content: "\e016"; } 
-}
+@mixin icon-headphones($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e035"; } }
 
+@mixin icon-volume-off($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e036"; } }
 
-@mixin icon-off(){
-  @include icon();
-  &:before { content: "\e017"; } 
-}
+@mixin icon-volume-down($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e037"; } }
 
+@mixin icon-volume-up($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e038"; } }
 
-@mixin icon-signal(){
-  @include icon();
-  &:before { content: "\e018"; } 
-}
+@mixin icon-qrcode($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e039"; } }
 
+@mixin icon-barcode($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e040"; } }
 
-@mixin icon-cog(){
-  @include icon();
-  &:before { content: "\e019"; } 
-}
+@mixin icon-tag($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e041"; } }
 
+@mixin icon-tags($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e042"; } }
 
-@mixin icon-trash(){
-  @include icon();
-  &:before { content: "\e020"; } 
-}
+@mixin icon-book($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e043"; } }
 
+@mixin icon-bookmark($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e044"; } }
 
-@mixin icon-home(){
-  @include icon();
-  &:before { content: "\e021"; } 
-}
+@mixin icon-print($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e045"; } }
 
+@mixin icon-camera($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e046"; } }
 
-@mixin icon-file(){
-  @include icon();
-  &:before { content: "\e022"; } 
-}
+@mixin icon-font($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e047"; } }
 
+@mixin icon-bold($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e048"; } }
 
-@mixin icon-time(){
-  @include icon();
-  &:before { content: "\e023"; } 
-}
+@mixin icon-italic($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e049"; } }
 
+@mixin icon-text-height($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e050"; } }
 
-@mixin icon-road(){
-  @include icon();
-  &:before { content: "\e024"; } 
-}
+@mixin icon-text-width($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e051"; } }
 
+@mixin icon-align-left($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e052"; } }
 
-@mixin icon-download-alt(){
-  @include icon();
-  &:before { content: "\e025"; } 
-}
+@mixin icon-align-center($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e053"; } }
 
+@mixin icon-align-right($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e054"; } }
 
-@mixin icon-download(){
-  @include icon();
-  &:before { content: "\e026"; } 
-}
+@mixin icon-align-justify($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e055"; } }
 
+@mixin icon-list($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e056"; } }
 
-@mixin icon-upload(){
-  @include icon();
-  &:before { content: "\e027"; } 
-}
+@mixin icon-indent-left($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e057"; } }
 
+@mixin icon-indent-right($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e058"; } }
 
-@mixin icon-inbox(){
-  @include icon();
-  &:before { content: "\e028"; } 
-}
+@mixin icon-facetime-video($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e059"; } }
 
+@mixin icon-picture($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e060"; } }
 
-@mixin icon-play-circle(){
-  @include icon();
-  &:before { content: "\e029"; } 
-}
+@mixin icon-map-marker($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e062"; } }
 
+@mixin icon-adjust($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e063"; } }
 
-@mixin icon-repeat(){
-  @include icon();
-  &:before { content: "\e030"; } 
-}
+@mixin icon-tint($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e064"; } }
 
+@mixin icon-edit($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e065"; } }
 
-@mixin icon-refresh(){
-  @include icon();
-  &:before { content: "\e031"; } 
-}
+@mixin icon-share($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e066"; } }
 
+@mixin icon-check($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e067"; } }
 
-@mixin icon-list-alt(){
-  @include icon();
-  &:before { content: "\e032"; } 
-}
+@mixin icon-move($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e068"; } }
 
+@mixin icon-step-backward($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e069"; } }
 
-@mixin icon-lock(){
-  @include icon();
-  &:before { content: "\e033"; } 
-}
+@mixin icon-fast-backward($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e070"; } }
 
+@mixin icon-backward($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e071"; } }
 
-@mixin icon-flag(){
-  @include icon();
-  &:before { content: "\e034"; } 
-}
+@mixin icon-play($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e072"; } }
 
+@mixin icon-pause($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e073"; } }
 
-@mixin icon-headphones(){
-  @include icon();
-  &:before { content: "\e035"; } 
-}
+@mixin icon-stop($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e074"; } }
 
+@mixin icon-forward($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e075"; } }
 
-@mixin icon-volume-off(){
-  @include icon();
-  &:before { content: "\e036"; } 
-}
+@mixin icon-fast-forward($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e076"; } }
 
+@mixin icon-step-forward($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e077"; } }
 
-@mixin icon-volume-down(){
-  @include icon();
-  &:before { content: "\e037"; } 
-}
+@mixin icon-eject($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e078"; } }
 
+@mixin icon-chevron-left($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e079"; } }
 
-@mixin icon-volume-up(){
-  @include icon();
-  &:before { content: "\e038"; } 
-}
+@mixin icon-chevron-right($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e080"; } }
 
+@mixin icon-plus-sign($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e081"; } }
 
-@mixin icon-qrcode(){
-  @include icon();
-  &:before { content: "\e039"; } 
-}
+@mixin icon-minus-sign($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e082"; } }
 
+@mixin icon-remove-sign($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e083"; } }
 
-@mixin icon-barcode(){
-  @include icon();
-  &:before { content: "\e040"; } 
-}
+@mixin icon-ok-sign($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e084"; } }
 
+@mixin icon-question-sign($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e085"; } }
 
-@mixin icon-tag(){
-  @include icon();
-  &:before { content: "\e041"; } 
-}
+@mixin icon-info-sign($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e086"; } }
 
+@mixin icon-screenshot($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e087"; } }
 
-@mixin icon-tags(){
-  @include icon();
-  &:before { content: "\e042"; } 
-}
+@mixin icon-remove-circle($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e088"; } }
 
+@mixin icon-ok-circle($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e089"; } }
 
-@mixin icon-book(){
-  @include icon();
-  &:before { content: "\e043"; } 
-}
+@mixin icon-ban-circle($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e090"; } }
 
+@mixin icon-arrow-left($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e091"; } }
 
-@mixin icon-bookmark(){
-  @include icon();
-  &:before { content: "\e044"; } 
-}
+@mixin icon-arrow-right($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e092"; } }
 
+@mixin icon-arrow-up($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e093"; } }
 
-@mixin icon-print(){
-  @include icon();
-  &:before { content: "\e045"; } 
-}
+@mixin icon-arrow-down($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e094"; } }
 
+@mixin icon-share-alt($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e095"; } }
 
-@mixin icon-camera(){
-  @include icon();
-  &:before { content: "\e046"; } 
-}
+@mixin icon-resize-full($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e096"; } }
 
+@mixin icon-resize-small($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e097"; } }
 
-@mixin icon-font(){
-  @include icon();
-  &:before { content: "\e047"; } 
-}
+@mixin icon-exclamation-sign($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e101"; } }
 
+@mixin icon-gift($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e102"; } }
 
-@mixin icon-bold(){
-  @include icon();
-  &:before { content: "\e048"; } 
-}
+@mixin icon-leaf($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e103"; } }
 
+@mixin icon-fire($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e104"; } }
 
-@mixin icon-italic(){
-  @include icon();
-  &:before { content: "\e049"; } 
-}
+@mixin icon-eye-open($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e105"; } }
 
+@mixin icon-eye-close($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e106"; } }
 
-@mixin icon-text-height(){
-  @include icon();
-  &:before { content: "\e050"; } 
-}
+@mixin icon-warning-sign($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e107"; } }
 
+@mixin icon-plane($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e108"; } }
 
-@mixin icon-text-width(){
-  @include icon();
-  &:before { content: "\e051"; } 
-}
+@mixin icon-calendar($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e109"; } }
 
+@mixin icon-random($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e110"; } }
 
-@mixin icon-align-left(){
-  @include icon();
-  &:before { content: "\e052"; } 
-}
+@mixin icon-magnet($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e112"; } }
 
+@mixin icon-chevron-up($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e113"; } }
 
-@mixin icon-align-center(){
-  @include icon();
-  &:before { content: "\e053"; } 
-}
+@mixin icon-chevron-down($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e114"; } }
 
+@mixin icon-retweet($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e115"; } }
 
-@mixin icon-align-right(){
-  @include icon();
-  &:before { content: "\e054"; } 
-}
+@mixin icon-shopping-cart($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e116"; } }
 
+@mixin icon-folder-close($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e117"; } }
 
-@mixin icon-align-justify(){
-  @include icon();
-  &:before { content: "\e055"; } 
-}
+@mixin icon-folder-open($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e118"; } }
 
+@mixin icon-resize-vertical($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e119"; } }
 
-@mixin icon-list(){
-  @include icon();
-  &:before { content: "\e056"; } 
-}
+@mixin icon-resize-horizontal($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e120"; } }
 
+@mixin icon-hdd($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e121"; } }
 
-@mixin icon-indent-left(){
-  @include icon();
-  &:before { content: "\e057"; } 
-}
+@mixin icon-bullhorn($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e122"; } }
 
+@mixin icon-bell($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e123"; } }
 
-@mixin icon-indent-right(){
-  @include icon();
-  &:before { content: "\e058"; } 
-}
+@mixin icon-certificate($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e124"; } }
 
+@mixin icon-thumbs-up($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e125"; } }
 
-@mixin icon-facetime-video(){
-  @include icon();
-  &:before { content: "\e059"; } 
-}
+@mixin icon-thumbs-down($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e126"; } }
 
+@mixin icon-hand-right($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e127"; } }
 
-@mixin icon-picture(){
-  @include icon();
-  &:before { content: "\e060"; } 
-}
+@mixin icon-hand-left($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e128"; } }
 
+@mixin icon-hand-up($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e129"; } }
 
-@mixin icon-map-marker(){
-  @include icon();
-  &:before { content: "\e062"; } 
-}
+@mixin icon-hand-down($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e130"; } }
 
+@mixin icon-circle-arrow-right($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e131"; } }
 
-@mixin icon-adjust(){
-  @include icon();
-  &:before { content: "\e063"; } 
-}
+@mixin icon-circle-arrow-left($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e132"; } }
 
+@mixin icon-circle-arrow-up($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e133"; } }
 
-@mixin icon-tint(){
-  @include icon();
-  &:before { content: "\e064"; } 
-}
+@mixin icon-circle-arrow-down($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e134"; } }
 
+@mixin icon-globe($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e135"; } }
 
-@mixin icon-edit(){
-  @include icon();
-  &:before { content: "\e065"; } 
-}
+@mixin icon-wrench($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e136"; } }
 
+@mixin icon-tasks($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e137"; } }
 
-@mixin icon-share(){
-  @include icon();
-  &:before { content: "\e066"; } 
-}
+@mixin icon-filter($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e138"; } }
 
+@mixin icon-briefcase($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e139"; } }
 
-@mixin icon-check(){
-  @include icon();
-  &:before { content: "\e067"; } 
-}
+@mixin icon-fullscreen($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e140"; } }
 
+@mixin icon-dashboard($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e141"; } }
 
-@mixin icon-move(){
-  @include icon();
-  &:before { content: "\e068"; } 
-}
+@mixin icon-paperclip($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e142"; } }
 
+@mixin icon-heart-empty($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e143"; } }
 
-@mixin icon-step-backward(){
-  @include icon();
-  &:before { content: "\e069"; } 
-}
+@mixin icon-link($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e144"; } }
 
+@mixin icon-phone($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e145"; } }
 
-@mixin icon-fast-backward(){
-  @include icon();
-  &:before { content: "\e070"; } 
-}
+@mixin icon-pushpin($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e146"; } }
 
+@mixin icon-usd($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e148"; } }
 
-@mixin icon-backward(){
-  @include icon();
-  &:before { content: "\e071"; } 
-}
+@mixin icon-gbp($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e149"; } }
 
+@mixin icon-sort($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e150"; } }
 
-@mixin icon-play(){
-  @include icon();
-  &:before { content: "\e072"; } 
-}
+@mixin icon-sort-by-alphabet($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e151"; } }
 
+@mixin icon-sort-by-alphabet-alt($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e152"; } }
 
-@mixin icon-pause(){
-  @include icon();
-  &:before { content: "\e073"; } 
-}
+@mixin icon-sort-by-order($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e153"; } }
 
+@mixin icon-sort-by-order-alt($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e154"; } }
 
-@mixin icon-stop(){
-  @include icon();
-  &:before { content: "\e074"; } 
-}
+@mixin icon-sort-by-attributes($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e155"; } }
 
+@mixin icon-sort-by-attributes-al($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e156"; } }
 
-@mixin icon-forward(){
-  @include icon();
-  &:before { content: "\e075"; } 
-}
+@mixin icon-unchecked($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e157"; } }
 
+@mixin icon-expand($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e158"; } }
 
-@mixin icon-fast-forward(){
-  @include icon();
-  &:before { content: "\e076"; } 
-}
+@mixin icon-collapse-down($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e159"; } }
 
+@mixin icon-collapse-up($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e160"; } }
 
-@mixin icon-step-forward(){
-  @include icon();
-  &:before { content: "\e077"; } 
-}
+@mixin icon-log-in($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e161"; } }
 
+@mixin icon-log-out($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e163"; } }
 
-@mixin icon-eject(){
-  @include icon();
-  &:before { content: "\e078"; } 
-}
+@mixin icon-new-window($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e164"; } }
 
+@mixin icon-record($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e165"; } }
 
-@mixin icon-chevron-left(){
-  @include icon();
-  &:before { content: "\e079"; } 
-}
+@mixin icon-save($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e166"; } }
 
+@mixin icon-open($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e167"; } }
 
-@mixin icon-chevron-right(){
-  @include icon();
-  &:before { content: "\e080"; } 
-}
+@mixin icon-saved($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e168"; } }
 
+@mixin icon-import($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e169"; } }
 
-@mixin icon-plus-sign(){
-  @include icon();
-  &:before { content: "\e081"; } 
-}
+@mixin icon-export($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e170"; } }
 
+@mixin icon-send($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e171"; } }
 
-@mixin icon-minus-sign(){
-  @include icon();
-  &:before { content: "\e082"; } 
-}
+@mixin icon-floppy-disk($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e172"; } }
 
+@mixin icon-floppy-saved($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e173"; } }
 
-@mixin icon-remove-sign(){
-  @include icon();
-  &:before { content: "\e083"; } 
-}
+@mixin icon-floppy-remove($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e174"; } }
 
+@mixin icon-floppy-save($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e175"; } }
 
-@mixin icon-ok-sign(){
-  @include icon();
-  &:before { content: "\e084"; } 
-}
+@mixin icon-floppy-open($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e176"; } }
 
+@mixin icon-credit-card($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e177"; } }
 
-@mixin icon-question-sign(){
-  @include icon();
-  &:before { content: "\e085"; } 
-}
+@mixin icon-transfer($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e178"; } }
 
+@mixin icon-cutlery($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e179"; } }
 
-@mixin icon-info-sign(){
-  @include icon();
-  &:before { content: "\e086"; } 
-}
+@mixin icon-header($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e180"; } }
 
+@mixin icon-compressed($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e181"; } }
 
-@mixin icon-screenshot(){
-  @include icon();
-  &:before { content: "\e087"; } 
-}
+@mixin icon-earphone($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e182"; } }
 
+@mixin icon-phone-alt($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e183"; } }
 
-@mixin icon-remove-circle(){
-  @include icon();
-  &:before { content: "\e088"; } 
-}
+@mixin icon-tower($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e184"; } }
 
+@mixin icon-sd-video($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e186"; } }
 
-@mixin icon-ok-circle(){
-  @include icon();
-  &:before { content: "\e089"; } 
-}
+@mixin icon-hd-video($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e187"; } }
 
+@mixin icon-subtitles($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e188"; } }
 
-@mixin icon-ban-circle(){
-  @include icon();
-  &:before { content: "\e090"; } 
-}
+@mixin icon-sound-stereo($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e189"; } }
 
+@mixin icon-sound-dolby($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e190"; } }
 
-@mixin icon-arrow-left(){
-  @include icon();
-  &:before { content: "\e091"; } 
-}
+@mixin icon-sound-5-1($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e191"; } }
 
+@mixin icon-sound-6-1($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e192"; } }
 
-@mixin icon-arrow-right(){
-  @include icon();
-  &:before { content: "\e092"; } 
-}
+@mixin icon-sound-7-1($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e193"; } }
 
+@mixin icon-copyright-mark($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e194"; } }
 
-@mixin icon-arrow-up(){
-  @include icon();
-  &:before { content: "\e093"; } 
-}
+@mixin icon-registration-mark($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e195"; } }
 
+@mixin icon-cloud-download($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e197"; } }
 
-@mixin icon-arrow-down(){
-  @include icon();
-  &:before { content: "\e094"; } 
-}
+@mixin icon-cloud-upload($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e198"; } }
 
+@mixin icon-tree-conifer($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e199"; } }
 
-@mixin icon-share-alt(){
-  @include icon();
-  &:before { content: "\e095"; } 
-}
-
-
-@mixin icon-resize-full(){
-  @include icon();
-  &:before { content: "\e096"; } 
-}
-
-
-@mixin icon-resize-small(){
-  @include icon();
-  &:before { content: "\e097"; } 
-}
-
-
-@mixin icon-exclamation-sign(){
-  @include icon();
-  &:before { content: "\e101"; } 
-}
-
-
-@mixin icon-gift(){
-  @include icon();
-  &:before { content: "\e102"; } 
-}
-
-
-@mixin icon-leaf(){
-  @include icon();
-  &:before { content: "\e103"; } 
-}
-
-
-@mixin icon-fire(){
-  @include icon();
-  &:before { content: "\e104"; } 
-}
-
-
-@mixin icon-eye-open(){
-  @include icon();
-  &:before { content: "\e105"; } 
-}
-
-
-@mixin icon-eye-close(){
-  @include icon();
-  &:before { content: "\e106"; } 
-}
-
-
-@mixin icon-warning-sign(){
-  @include icon();
-  &:before { content: "\e107"; } 
-}
-
-
-@mixin icon-plane(){
-  @include icon();
-  &:before { content: "\e108"; } 
-}
-
-
-@mixin icon-calendar(){
-  @include icon();
-  &:before { content: "\e109"; } 
-}
-
-
-@mixin icon-random(){
-  @include icon();
-  &:before { content: "\e110"; } 
-}
-
-
-@mixin icon-comment(){
-  @include icon();
-  &:before { content: "\e111"; } 
-}
-
-
-@mixin icon-magnet(){
-  @include icon();
-  &:before { content: "\e112"; } 
-}
-
-
-@mixin icon-chevron-up(){
-  @include icon();
-  &:before { content: "\e113"; } 
-}
-
-
-@mixin icon-chevron-down(){
-  @include icon();
-  &:before { content: "\e114"; } 
-}
-
-
-@mixin icon-retweet(){
-  @include icon();
-  &:before { content: "\e115"; } 
-}
-
-
-@mixin icon-shopping-cart(){
-  @include icon();
-  &:before { content: "\e116"; } 
-}
-
-
-@mixin icon-folder-close(){
-  @include icon();
-  &:before { content: "\e117"; } 
-}
-
-
-@mixin icon-folder-open(){
-  @include icon();
-  &:before { content: "\e118"; } 
-}
-
-
-@mixin icon-resize-vertical(){
-  @include icon();
-  &:before { content: "\e119"; } 
-}
-
-
-@mixin icon-resize-horizontal(){
-  @include icon();
-  &:before { content: "\e120"; } 
-}
-
-
-@mixin icon-hdd(){
-  @include icon();
-  &:before { content: "\e121"; } 
-}
-
-
-@mixin icon-bullhorn(){
-  @include icon();
-  &:before { content: "\e122"; } 
-}
-
-
-@mixin icon-bell(){
-  @include icon();
-  &:before { content: "\e123"; } 
-}
-
-
-@mixin icon-certificate(){
-  @include icon();
-  &:before { content: "\e124"; } 
-}
-
-
-@mixin icon-thumbs-up(){
-  @include icon();
-  &:before { content: "\e125"; } 
-}
-
-
-@mixin icon-thumbs-down(){
-  @include icon();
-  &:before { content: "\e126"; } 
-}
-
-
-@mixin icon-hand-right(){
-  @include icon();
-  &:before { content: "\e127"; } 
-}
-
-
-@mixin icon-hand-left(){
-  @include icon();
-  &:before { content: "\e128"; } 
-}
-
-
-@mixin icon-hand-up(){
-  @include icon();
-  &:before { content: "\e129"; } 
-}
-
-
-@mixin icon-hand-down(){
-  @include icon();
-  &:before { content: "\e130"; } 
-}
-
-
-@mixin icon-circle-arrow-right(){
-  @include icon();
-  &:before { content: "\e131"; } 
-}
-
-
-@mixin icon-circle-arrow-left(){
-  @include icon();
-  &:before { content: "\e132"; } 
-}
-
-
-@mixin icon-circle-arrow-up(){
-  @include icon();
-  &:before { content: "\e133"; } 
-}
-
-
-@mixin icon-circle-arrow-down(){
-  @include icon();
-  &:before { content: "\e134"; } 
-}
-
-
-@mixin icon-globe(){
-  @include icon();
-  &:before { content: "\e135"; } 
-}
-
-
-@mixin icon-wrench(){
-  @include icon();
-  &:before { content: "\e136"; } 
-}
-
-
-@mixin icon-tasks(){
-  @include icon();
-  &:before { content: "\e137"; } 
-}
-
-
-@mixin icon-filter(){
-  @include icon();
-  &:before { content: "\e138"; } 
-}
-
-
-@mixin icon-briefcase(){
-  @include icon();
-  &:before { content: "\e139"; } 
-}
-
-
-@mixin icon-fullscreen(){
-  @include icon();
-  &:before { content: "\e140"; } 
-}
-
-
-@mixin icon-dashboard(){
-  @include icon();
-  &:before { content: "\e141"; } 
-}
-
-
-@mixin icon-paperclip(){
-  @include icon();
-  &:before { content: "\e142"; } 
-}
-
-
-@mixin icon-heart-empty(){
-  @include icon();
-  &:before { content: "\e143"; } 
-}
-
-
-@mixin icon-link(){
-  @include icon();
-  &:before { content: "\e144"; } 
-}
-
-
-@mixin icon-phone(){
-  @include icon();
-  &:before { content: "\e145"; } 
-}
-
-
-@mixin icon-pushpin(){
-  @include icon();
-  &:before { content: "\e146"; } 
-}
-
-
-@mixin icon-usd(){
-  @include icon();
-  &:before { content: "\e148"; } 
-}
-
-
-@mixin icon-gbp(){
-  @include icon();
-  &:before { content: "\e149"; } 
-}
-
-
-@mixin icon-sort(){
-  @include icon();
-  &:before { content: "\e150"; } 
-}
-
-
-@mixin icon-sort-by-alphabet(){
-  @include icon();
-  &:before { content: "\e151"; } 
-}
-
-
-@mixin icon-sort-by-alphabet-alt(){
-  @include icon();
-  &:before { content: "\e152"; } 
-}
-
-
-@mixin icon-sort-by-order(){
-  @include icon();
-  &:before { content: "\e153"; } 
-}
-
-
-@mixin icon-sort-by-order-alt(){
-  @include icon();
-  &:before { content: "\e154"; } 
-}
-
-
-@mixin icon-sort-by-attributes(){
-  @include icon();
-  &:before { content: "\e155"; } 
-}
-
-
-@mixin icon-sort-by-attributes-al(){
-  @include icon();
-  &:before { content: "\e156"; } 
-}
-
-
-@mixin icon-unchecked(){
-  @include icon();
-  &:before { content: "\e157"; } 
-}
-
-
-@mixin icon-expand(){
-  @include icon();
-  &:before { content: "\e158"; } 
-}
-
-
-@mixin icon-collapse-down(){
-  @include icon();
-  &:before { content: "\e159"; } 
-}
-
-
-@mixin icon-collapse-up(){
-  @include icon();
-  &:before { content: "\e160"; } 
-}
-
-
-@mixin icon-log-in(){
-  @include icon();
-  &:before { content: "\e161"; } 
-}
-
-
-@mixin icon-log-out(){
-  @include icon();
-  &:before { content: "\e163"; } 
-}
-
-
-@mixin icon-new-window(){
-  @include icon();
-  &:before { content: "\e164"; } 
-}
-
-
-@mixin icon-record(){
-  @include icon();
-  &:before { content: "\e165"; } 
-}
-
-
-@mixin icon-save(){
-  @include icon();
-  &:before { content: "\e166"; } 
-}
-
-
-@mixin icon-open(){
-  @include icon();
-  &:before { content: "\e167"; } 
-}
-
-
-@mixin icon-saved(){
-  @include icon();
-  &:before { content: "\e168"; } 
-}
-
-
-@mixin icon-import(){
-  @include icon();
-  &:before { content: "\e169"; } 
-}
-
-
-@mixin icon-export(){
-  @include icon();
-  &:before { content: "\e170"; } 
-}
-
-
-@mixin icon-send(){
-  @include icon();
-  &:before { content: "\e171"; } 
-}
-
-
-@mixin icon-floppy-disk(){
-  @include icon();
-  &:before { content: "\e172"; } 
-}
-
-
-@mixin icon-floppy-saved(){
-  @include icon();
-  &:before { content: "\e173"; } 
-}
-
-
-@mixin icon-floppy-remove(){
-  @include icon();
-  &:before { content: "\e174"; } 
-}
-
-
-@mixin icon-floppy-save(){
-  @include icon();
-  &:before { content: "\e175"; } 
-}
-
-
-@mixin icon-floppy-open(){
-  @include icon();
-  &:before { content: "\e176"; } 
-}
-
-
-@mixin icon-credit-card(){
-  @include icon();
-  &:before { content: "\e177"; } 
-}
-
-
-@mixin icon-transfer(){
-  @include icon();
-  &:before { content: "\e178"; } 
-}
-
-
-@mixin icon-cutlery(){
-  @include icon();
-  &:before { content: "\e179"; } 
-}
-
-
-@mixin icon-header(){
-  @include icon();
-  &:before { content: "\e180"; } 
-}
-
-
-@mixin icon-compressed(){
-  @include icon();
-  &:before { content: "\e181"; } 
-}
-
-
-@mixin icon-earphone(){
-  @include icon();
-  &:before { content: "\e182"; } 
-}
-
-
-@mixin icon-phone-alt(){
-  @include icon();
-  &:before { content: "\e183"; } 
-}
-
-
-@mixin icon-tower(){
-  @include icon();
-  &:before { content: "\e184"; } 
-}
-
-
-@mixin icon-stats(){
-  @include icon();
-  &:before { content: "\e185"; } 
-}
-
-
-@mixin icon-sd-video(){
-  @include icon();
-  &:before { content: "\e186"; } 
-}
-
-
-@mixin icon-hd-video(){
-  @include icon();
-  &:before { content: "\e187"; } 
-}
-
-
-@mixin icon-subtitles(){
-  @include icon();
-  &:before { content: "\e188"; } 
-}
-
-
-@mixin icon-sound-stereo(){
-  @include icon();
-  &:before { content: "\e189"; } 
-}
-
-
-@mixin icon-sound-dolby(){
-  @include icon();
-  &:before { content: "\e190"; } 
-}
-
-
-@mixin icon-sound-5-1(){
-  @include icon();
-  &:before { content: "\e191"; } 
-}
-
-
-@mixin icon-sound-6-1(){
-  @include icon();
-  &:before { content: "\e192"; } 
-}
-
-
-@mixin icon-sound-7-1(){
-  @include icon();
-  &:before { content: "\e193"; } 
-}
-
-
-@mixin icon-copyright-mark(){
-  @include icon();
-  &:before { content: "\e194"; } 
-}
-
-
-@mixin icon-registration-mark(){
-  @include icon();
-  &:before { content: "\e195"; } 
-}
-
-@mixin icon-cloud-download(){
-  @include icon();
-  &:before { content: "\e197"; } 
-}
-
-
-@mixin icon-cloud-upload(){
-  @include icon();
-  &:before { content: "\e198"; } 
-}
-
-
-@mixin icon-tree-conifer(){
-  @include icon();
-  &:before { content: "\e199"; } 
-}
-
-
-@mixin icon-tree-deciduous(){
-  @include icon();
-  &:before { content: "\e200"; } 
-}
+@mixin icon-tree-deciduous($font-size: 12px){@include icon($font-size: $font-size); &:before { content: "\e200"; } }
