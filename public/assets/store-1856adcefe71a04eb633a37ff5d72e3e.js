@@ -1,1 +1,0 @@
-(function(){Caller.Store=DS.Store.extend({adapter:"_ams"})}).call(this);
