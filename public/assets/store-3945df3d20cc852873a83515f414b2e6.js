@@ -1,0 +1,1 @@
+(function(){ReportCard.Adapter=DS.RESTAdapter.extend({bulkCommit:!1}),ReportCard.Adapter.map("ReportCard.Connection",{connections:{embedded:"always"}}),ReportCard.Store=DS.Store.extend({revision:1,adapter:ReportCard.Adapter.create()})}).call(this);
