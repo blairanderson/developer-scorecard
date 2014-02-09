@@ -3,7 +3,7 @@
 </div>
 <div class="row">
   <div class="sidebar-image">
-    <img {{bind-attr src=image}} alt="Logo" class="img-responsive center-block">
+    <img {{bind-attr src="image"}} alt="Logo" class="img-responsive center-block">
   </div>
   <div class="sidebar-panel">
     <div class="header">
@@ -11,7 +11,7 @@
     </div>
     <div>
       <p class="lead">
-        <a target="_blank" {{bindAttr href="targetUrl"}}>{{nickname}}</a>
+        <a target="_blank" {{bind-attr href="targetUrl"}}>{{nickname}}</a>
       </p>
       <p class="lead">
         {{userLeader}}
