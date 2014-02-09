@@ -1,29 +1,30 @@
 .tabs-content {
   border: solid 1px lightgray;
   border-top: none;
+  padding: 20px; 
+  margin-right: 2px;
 }
 .tabs-container {
+  margin-left: 15px;
   .tab-list {
-
     margin-bottom: 0;
     padding-left: 0; // Override default ul/ol
     list-style: none;
     @include clearfix();
-    border-bottom: 1px solid $nav-tabs-border-color;
-
     > div {
       position: relative;
       display: block;
-      width: 33.33333%;
+      width: 33.33333333333%;
       text-align: center;
       float: left;
-      // Make the list-items overlay the bottom border
       margin-bottom: -1px;
+      @include border-bottom();
       > a {
         position: relative;
         display: block;
         padding: $nav-link-padding;
         margin-right: 2px;
+        margin-top: 38px;
         line-height: $line-height-base;
         border: 1px solid transparent;
         border-radius: $border-radius-base $border-radius-base 0 0;
@@ -46,10 +47,15 @@
       }
       &.active > a {
         margin-top: 0px;
+        padding-bottom: 54px;
+        border-bottom:  none;
         border: 1px solid $nav-tabs-active-link-hover-border-color;
         border-bottom-color: transparent;
         color: $nav-tabs-active-link-hover-color;
         background-color: $nav-tabs-active-link-hover-bg;
+      }
+      &.active {
+        border-bottom: none;
       }
     }
   }
