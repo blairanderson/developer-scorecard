@@ -1,22 +1,40 @@
-connected users
-{{#each connected_users}}
-  <div class="user-name">
-    {{#link-to 'user' username}} {{name}} - {{username}} {{/link-to}}
+<div class="tabs-container">
+  <div class="tab-list">
+    <div class="home active">
+      <a href="">home</a>
+    </div>
+    <div class="profile">
+      <a href="">profile</a>
+    </div>
+    <div class="messages">
+      <a href="">messages</a>
+    </div>
   </div>
-{{/each}}
+  <div class="tabs-content">
+    connected users
+    {{#each connected_users}}
+      <div class="user-name">
+        {{#link-to 'user' username}} {{name}} - {{username}} {{/link-to}}
+      </div>
+    {{/each}}
 
-repositories
-<ul>
-  {{#each repositories}}
-    <li>{{count}} - {{repo}}</li>
-  {{/each}}
-</ul>
 
-similar users
-<ul>
-{{#each similar_users}}
-  <li>
-    {{#link-to 'user' username}} {{name}} - {{username}} {{/link-to}}
-  </li>
-{{/each}}
-</ul>
+    repositories
+    <ul>
+      {{#each repositories}}
+        <li>{{count}} - {{repo}}</li>
+      {{/each}}
+    </ul>
+
+
+    similar users
+    <ul>
+    {{#each similar_users}}
+      <li>
+        {{#link-to 'user' username}} {{name}} - {{username}} {{/link-to}}
+      </li>
+    {{/each}}
+    </ul>
+  </div>
+
+</div>

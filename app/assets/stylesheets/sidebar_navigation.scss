@@ -2,6 +2,10 @@ $sidebar-background: #373634;
 $sidebar-text-color: white;
 $sidebar-padding: 15px;
 
+@mixin border-bottom($color: $gangreen, $size: 5px) {
+  border-bottom: solid $gangreen $size;
+}
+
 @mixin sidebar-background(){
   background-color: #373634;
   background-image: -webkit-gradient(radial, 50% 50%,0,50% 50%,200, from(rgb(38, 38, 38)), to(rgb(55, 54, 52)));
@@ -17,7 +21,7 @@ $sidebar-padding: 15px;
 }
 
 .sidebar-image {
-  border-bottom: solid 5px $gangreen;
+  @include border-bottom();
 }
 .sidebar-panel {
   div{
