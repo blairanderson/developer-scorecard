@@ -16,6 +16,7 @@ ReportCard.UserRoute = Ember.Route.extend({
     };
     this.controllerFor('meta').set('model', model.meta_object);
   },
+
   renderTemplate: function() {
     this.render('callout', {outlet: 'callout', controller: 'navigation'});
     this.render('jumbo', {outlet: 'jumbo'});

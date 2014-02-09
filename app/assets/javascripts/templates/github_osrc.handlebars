@@ -1,16 +1,24 @@
 <div class="tabs-container">
   <div class="tab-list">
-    <div class="home">
-      <a href="">home</a>
+    <div class="active" id="dashboard">
+      <a href="/">Dashboard</a>
     </div>
-    <div class="profile">
-      <a href="">profile</a>
+    <div class="" id="osrc">
+      <a href="/">OSRC</a>
     </div>
-    <div class="messages active">
-      <a href="">messages</a>
+    <div class="" id="github">
+      <a href="/">Github</a>
+    </div>
+    <div class="" id="etc">
+      <a href="/">etc.</a>
     </div>
   </div>
+
   <div class="tabs-content">
+    <div class="tab" id="dashboard"></div>
+    <div class="tab" id="osrc"></div>
+    <div class="tab" id="github"></div>
+    <div class="tab" id="etc"></div>
     connected users
     {{#each connected_users}}
       <div class="user-name">
@@ -36,5 +44,4 @@
     {{/each}}
     </ul>
   </div>
-
 </div>
