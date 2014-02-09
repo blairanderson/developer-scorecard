@@ -1,7 +1,6 @@
 ReportCard.DashboardRoute = Ember.Route.extend({
   model: function(params) {
     return Ember.$.getJSON("/dashboard");
-    // return ReportCard.Store.find('dashboard')
   },
 
 

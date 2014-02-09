@@ -28,24 +28,26 @@
     </ul>
   </div>
   <div class="sidebar-list">
-    <a href="#" class="sidebar-list-item">{{currentDate}}</a>
-    <hr>
-    <a href="#" class="sidebar-list-item">{{currentTime}}</a>
-    <hr>
-    <a href="#" class="sidebar-list-item"> {{nickname}} - {{provider}} - {{uid}} </a>
-    <hr>
-    <a href="#" class="sidebar-list-item">{{email}}</a>
-    <hr>
-    <a href="#" class="sidebar-list-item">{{sign_in_count}}</a>
-    <hr>
-    <a href="#" class="sidebar-list-item">{{current_sign_in_at}}</a>
-    <hr>
-    <a href="#" class="sidebar-list-item">{{last_sign_in_at}}</a>
-    <hr>
-    <a href="#" class="sidebar-list-item">{{created_at}}</a>
-    <hr>
-    <a href="#" class="sidebar-list-item">{{updated_at}}</a>
-    <hr>
+    <div class="sidebar-list-item">
+      <h3>Activity</h3>
+    </div>
+    <div class="sidebar-list-item">
+      <span>Sign In Count: </span>
+      <a href="#" >{{sign_in_count}}</a>
+    </div>
+    <div class="sidebar-list-item">
+      <span>{{provider}} uid: </span>
+      <span>{{uid}}</span>
+    </div>
+    <div class="sidebar-list-item">
+      <span>Contact: </span>
+      <a href="#">{{email}}</a>
+    </div>
+
+    <div class="sidebar-list-item">
+      <span>Member Since: </span>
+      <a href="#">{{created_at}}</a>
+    </div>
   </div>
 </div>
 
