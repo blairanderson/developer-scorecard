@@ -50,3 +50,7 @@ On your first ember app, use a generator. It will help you instantly have the sk
 I think of the user_route as a `before_filter` to the controllers.
 
 Inside the `user_route.js`
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/blairanderson/open-source-report-card/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
